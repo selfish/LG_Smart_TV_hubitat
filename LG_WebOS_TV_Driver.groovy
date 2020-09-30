@@ -735,6 +735,11 @@ def channelDown()
     sendWebosCommand(uri: 'tv/channelDown')
 }
 
+def setChannel(channelNumber)
+{
+    log_info "setChannel(): Executing 'setChannel' with channelNumber '${channelNumber}'"
+    sendWebosCommand(uri: 'tv/openChannel', payload: [channelNumber: channelNumber])
+}
 
 // handle commands
 def volumeUp() 
